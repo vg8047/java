@@ -1,37 +1,38 @@
 class Outer{
 
 
-	int x = 10;
+	void fun(){
 
-	static int y = 20;
-
-	Outer(){
-
-		System.out.println("in outer ");
+		Inner obj = new Inner();
 
 	}
+
 
 	class Inner{
 
-	        int x = 90;
+                int x = 90;
 
-		Inner(){
+                Inner(){
 
-			System.out.println("innner ");
+                        System.out.println("innner ");
 
-	         	System.out.println(x);
+                        System.out.println(x);
 
-		        System.out.println(y);
- 
-		}
 
-	}
+
+                }
+
+        }
+
+}
+
+class Client{
 
 	public static void main(String[] args){
 
 		Outer obj = new Outer();
-
-		Inner obj1 = obj.new Inner();
+                 
+		obj.fun();
 
 	}
 }
